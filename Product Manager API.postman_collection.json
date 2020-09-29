@@ -1,0 +1,151 @@
+{
+	"info": {
+		"_postman_id": "e5e69126-e6ea-4358-92f6-b068b486b4d0",
+		"name": "Product Manager API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Post Data ",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 6,\r\n    \"name\": \"Adidas Nemeziz .3 Laceless IN-Signal Coral/Core Black/Solar\",\r\n    \"brand\": \"Adidas\",\r\n    \"category\": \"Futsal Boots\",\r\n    \"price\": 1475000,\r\n    \"discount\": 45,\r\n    \"stock\": 10,\r\n    \"sold\": 0,\r\n    \"image1\": \"https://www.prodirectsoccer.com/ProductImages/Main/226501_Main_Thumb_0738624.jpg\",\r\n    \"image2\": \"https://www.prodirectsoccer.com/nl/productimages/V3_1_Gallery_5/226501_Gallery_5_0738641.jpg\",\r\n    \"image3\": \"https://www.prodirectsoccer.com/nl/productimages/V3_1_Gallery_5/226501_Gallery_5_0738641.jpg\",\r\n    \"status\": \"Posted\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/product",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Data With Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/product/10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"product",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Filter Data By Name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:2000/search?name=Puma",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"search"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Puma"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Data By Id",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Nike Superfly\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:2000/product/1000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"product",
+						"1000"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Data By Id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:2000/product/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"product",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
